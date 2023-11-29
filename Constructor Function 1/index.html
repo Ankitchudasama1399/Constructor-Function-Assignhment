@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class Author {
+    constructor(name, birthYear, nationality) {
+        this.name = name;
+        this.birthYear = birthYear;
+        this.nationality = nationality;
+    }
+}
+
+class Book {
+    constructor(title, author, genre, price) {
+        this.title = title;
+        this.author = author; 
+        this.genre = genre;
+        this.price = price;
+    }
+
+    getBookInfo() {
+        console.log(`Title: ${this.title}`);
+        console.log(`Author: ${this.author.name}`);
+        console.log(`Genre: ${this.genre}`);
+        console.log(`Price: $${this.price}`);
+        console.log("----------------------");
+    }
+}
+
+const author1 = new Author("Amit Trivedi", 1980, "Indian");
+const author2 = new Author("Nilesh Yadav", 1975, "Indian");
+
+const book1 = new Book("Book 1", author1, "Fiction", 20.99);
+const book2 = new Book("Book 2", author2, "Mystery", 55.99);
+const book3 = new Book("Book 3", author1, "Science Fiction", 11.99);
+
+book1.getBookInfo();
+book2.getBookInfo();
+book3.getBookInfo();
+
+</script>
+</html>
